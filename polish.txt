@@ -1,0 +1,40 @@
+Witam!
+Słowem wstępu do wstępu chciałbym zakomunikować, że jest to mój debiutancki występ przed wymagającą widownią.
+Ta zacna widownia przyszła na spotkanie dlatego, że chce, a nie że musi, co jest dla mnie znacznie trudniejszym levelem do prezentacji, przygotowania, i tak dalej.
+Proszę Was z jednej strony o wyrozumiałość, z drugiej zaś o zakomunikowanie mi w formie maila lub bezpośrednio w twarz uwag do tego co się tutaj wydarzyło, co można byłoby robić lepiej, a czego wcale. Cały feedback mile widziany. Mam nadzieję, że generalnie prezentacja się spodoba i może przyniesie pożądany skutek, który sobie w pewnnym sensie wyznaczyłem, ale o tym za chwile.
+
+Dziś będe mówił o bardzo nietypowym problemie. W sumie o podstawach tworzenia oprogramowania. To klikanie w klawiature. Podstawowy proces twórczy, rzemieślnicy basic. Wykonujemy dziennie miliony klikówc w klawiature. To bardzo często niewdzięczny, wręcz niedotykany temat przez wielu profesjonalistów.
+
+# WSTEP DO WARSZTATU PROGRAMISTY
+
+Dziś, podczas tego krótkiego spotkania będzie omawiał przykład edytora jakim jest VIM. Vima zna chyba kazdy, kto chociaż raz zetknał się z linuksem czy cygwinem, nieopatrznie robiąc samo git commit -a bez podania message parametru - wydaje mi się, że jest to podstawowy edytor tekstu w większości linuksów, w części jest też nano, trochę bardziej user friendly.
+
+No właśnie, bo czym jest edycja tekstu? Generalnie wstukiwaniem klawiszy i to jest ok. Tak naprawdę jakie mamy możliwości poruszania się po tekście? Zasadniczo, mamy mysz, strzałki przenoszące nas o jeden znak, end, home. Nie przypominam sobie, by w podstawowych klawiszach klawiatury były jakieś specjalnie przeznaczone przyciski do prouszania się po tekście, w szczególności po tym specjalnycm tekście jakim jest kod - który posiada bardziej logiczną strukturę niż inne teksty, w szczególności poezja, która jest naprawdę nieustrukturyzowanym tworem literackim. Co innego program napisany w języku programowania. no może poza LISP.
+
+Zastanówmy się przez chwile, by przemyślec pewien przykład, który może być lekko prostszy niż programowanie - specjalny edytor tekstu do prozy. Proza, generalnie, składa się z wyrazów, znaków przystankowych. Te składają się w zdania. Zdania w akapity. Akapoty w rozdziały. Przyjmijmy, że nasza proza nie ma dialogów. Co powinniśmy mieć w takim edytorze, żeby sprawnie edytować utwór?
+
+Wydaje mi się, że:
+- przesuwanie wskaźnika o wyraz, zdanie, akapit, rozdział
+- usuwanie w/w
+- edycja, tworzenie nowego rozdziału, zdania jako jeden przycisk
+
+Dokładnie takich rzeczy potrzebujemy. I wiecie co? VIM się do tego nadaje. Tak bardzo archaiczny już edytor, bo powstał dawno temu w odmętach uniksowego zachłyścinęcia się opensource, potrafi tak bardzo skomplikowane rzeczy. 
+
+:::::: URUCHOM VIM ::::::::
+
+Dobrze, teraz przyjrzyjmy się temu, co dzieje się w edytorze.
+Generalnie edytor dzieli się na proste 3 części, na treść, którą widzimy, pasek stanu o którym zaraz i pasek akcji który pomaga nam i podpowiada, w jakim trybie się znajdujemy.
+
+No właśnie, tryby. VIM potrzebuje trybów, ze względu na ograniczenie rozmarów klawiatury i ilości przycisków nie jesteśmy w stanie zaimplementować wszystkich akcji za pomocą jednoznaczących przycisków. Oczywiście, EMACS robi to doskonale, zamiast trybów raczej wprowadzając klawiszowe kombinacje.
+Mam jednak za małe palce. Właściwie wydaje mi się, że wyznawcy Emacsa i VIM różnią się własnie długością palców. Emacs zakłada bardzo długie palce. Nie ma hejtu w tym wszystkim, to oczywiście tylko i wyłącznie kwestia preferencji i tego jak ktoś lubi LISP. Ja lubię.
+
+Wracając do tematu - mamy generalnie 3 tryby:
+- tryb normalny - czyli nawigacji. W tym trybie skaczemy ile dusza pozwoli.
+- tryb edycji. Ten tryb pozwala na wpisywanie tekstu (insertion mode)
+- tryb wizualny (visual). W tym trybie poruszamy sie praktycznie jak po trybie normalnym, z tą różnicą, że podczas porsuzania zaznaczamy tekst.
+
+Jest parę innych trybów, ale o nich nie będe się rozwodził, gdyż są albo wariacjami innych trybów albo wsparciem dla napisanych w VIM wtyczek.
+
+Przejścia pomiędzy trybami, czy też, jak wolałem to nazywać, stanami edytora wykonuje się oczywiście za pomocą klawiszy. Podstawy - i, a, o przechodzą w tryb edycji w konkretnym stanie. v z reguły rozpoczyna tryb wizyualny. Do normalnegio trybu wcalamy przez klawisz escape.
+
+Tak to własnie wygląda, więc spróbujmy się poruszyć. VIM zakłada, że mamy tak krótkie palce jak ja i strzałki są zdecydowanie za daleko od klawiatury, zatem wprowadza środkowy rząd klawiszów po prawej jako kolejno left down up right. Dlaczego nie jest to w formie WSAD tego naprawdę nie potrafię wyjaśnić - nie te czasy, ktoś nie grał w FIFA 95, no ciężko mi powiedziec.
