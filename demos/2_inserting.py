@@ -16,9 +16,9 @@
 
 # Case 5: Move this block with `>>` and get it back with `<<`
 
-class Putas:
+class Example:
 
-    def mierde(self):
+    def hello(self):
         pass
 
 
