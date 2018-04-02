@@ -1,0 +1,22 @@
+{
+  "name": "vim-presentation",
+  "version": "1.0.0",
+  "description": "Presentation for advanced text editing in developer's life",
+  "main": "http-server",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puradawid/vim-presentation.git"
+  },
+  "keywords": [
+    "presentation"
+  ],
+  "author": "Dawid Pura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/puradawid/vim-presentation/issues"
+  },
+  "homepage": "https://github.com/puradawid/vim-presentation#readme"
+}
